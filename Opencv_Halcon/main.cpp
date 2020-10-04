@@ -15,8 +15,6 @@ Hobject hObj;
 
 int main(int argc, char* argv[])
 {
-
-
 	//Hobject - to - Image
 	read_image(&Image, "D:/OMEN/Opencv_Halcon12/Opencv_Halcon/lena.jpg");
 	cv::Mat opencvImg = HImageToIplImage(Image);
