@@ -336,5 +336,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
+# Alter gitignore
 # BeatPulse healthcheck temp database
 healthchecksdb
