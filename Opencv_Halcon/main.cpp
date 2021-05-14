@@ -28,8 +28,8 @@ int main(int argc, char* argv[])
 
 	//Image - to - Hobject
 
-	//Mat image = imread("D:/OMEN/Opencv_Halcon10/Opencv_Halcon/lena.jpg");//²ÊÉ«Í¼
-	// //Mat image = imread("lena1.png", CV_LOAD_IMAGE_GRAYSCALE);//»Ò¶ÈÍ¼
+	//Mat image = imread("D:/OMEN/Opencv_Halcon10/Opencv_Halcon/lena.jpg");//å½©è‰²å›¾
+	// //Mat image = imread("lena1.png", CV_LOAD_IMAGE_GRAYSCALE);//ç°åº¦å›¾
 	//hObj = MatToHobject(image);
 
 	//HTuple winHandle;
@@ -43,13 +43,14 @@ int main(int argc, char* argv[])
 	//system("pause");
 }
 
+// Hobjectè½¬æ¢ä¸ºMat
 cv::Mat HImageToIplImage(Hobject& Hobj)
 {
 	cv::Mat pImage;
 	HTuple htChannels;
 	HTuple width, height;
 	width = height = 0;
-	//×ª»»Í¼Ïñ¸ñÊ½    
+	//è½¬æ¢å›¾åƒæ ¼å¼    
 	convert_image_type(Hobj, &Hobj, "byte");
 	count_channels(Hobj, &htChannels);
 	HTuple cType;
@@ -112,7 +113,7 @@ cv::Mat HImageToIplImage(Hobject& Hobj)
 	return pImage;
 }
 
-// Mat×ª»»ÎªHobject
+// Matè½¬æ¢ä¸ºHobject
 Hobject MatToHobject(Mat& image)
 {
 	if (image.channels() == 1)
@@ -134,8 +135,8 @@ Hobject MatToHobject(Mat& image)
 		Mat imgB;
 		Mat imgG;
 		Mat imgR;
-		// °ÑÒ»¸ö3Í¨µÀÍ¼Ïñ×ª»»³É3¸öµ¥Í¨µÀÍ¼Ïñ  
-		split(image, ichannels);//·ÖÀëÉ«²ÊÍ¨µÀ  
+		// æŠŠä¸€ä¸ª3é€šé“å›¾åƒè½¬æ¢æˆ3ä¸ªå•é€šé“å›¾åƒ  
+		split(image, ichannels);//åˆ†ç¦»è‰²å½©é€šé“  
 		imgB = ichannels[0];
 		imgG = ichannels[1];
 		imgR = ichannels[2];
