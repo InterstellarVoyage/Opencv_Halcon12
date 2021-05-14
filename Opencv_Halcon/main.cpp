@@ -155,6 +155,7 @@ Hobject MatToHobject(Mat& image)
 			memcpy(dataGreen + width * i, imgG.ptr() + imgB.step * i, width);
 			memcpy(dataBlue + width * i, imgB.ptr() + imgB.step * i, width);
 		}
+		// "byte" 为8位深图像，List of values: 'byte', 'cyclic', 'direction', 'int1', 'int2', 'int4', 'real', 'uint2'
 		gen_image3(&hObj, "byte", width, height, (Hlong)(dataRed), (Hlong)(dataGreen), (Hlong)(dataBlue));
 		delete[] dataRed;
 		delete[] dataGreen;
