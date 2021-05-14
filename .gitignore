@@ -337,5 +337,6 @@ ASALocalRun/
 .localhistory/
 
 # Alter gitignore
+# Alter gitignore 2
 # BeatPulse healthcheck temp database
 healthchecksdb
