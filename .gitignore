@@ -338,5 +338,6 @@ ASALocalRun/
 
 # Alter gitignore
 # Alter gitignore 2
+# fetch operator
 # BeatPulse healthcheck temp database
 healthchecksdb
